@@ -9,6 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.helloprogmob.Pertemuan2.ListActivity;
+import com.example.helloprogmob.Pertemuan2.RecylerActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -21,6 +24,12 @@ public class MainActivity extends AppCompatActivity {
         Button myBtn = (Button) findViewById(R.id.button1);
         final EditText myEditText = (EditText) findViewById(R.id.editText1);
         Button btnHelp = (Button)findViewById((R.id.btnHelp));
+
+        //
+        Button btnList = (Button)findViewById(R.id.buttonListView);
+        Button btnRecyler =(Button) findViewById(R.id.buttonRecylerView);
+        Button btnCard =(Button) findViewById(R.id.buttonCardView);
+
 
 
         //action
@@ -48,7 +57,20 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
+        btnList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ListActivity.class);
+                startActivity(intent);
+            }
+        });
+        btnRecyler.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, RecylerActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }

@@ -24,7 +24,7 @@
         android:id="@+id/MainActivityTextView"
         android:layout_width="172dp"
         android:layout_height="38dp"
-        android:text="Hello Melsiora Saniba Fernandes"
+        android:text="Hello Progmob 2020"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -45,14 +45,49 @@
 
     <Button
         android:id="@+id/btnHelp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
         android:text="Help"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editText1"
+        app:layout_constraintVertical_bias="0.319" />
+
+    <Button
+        android:id="@+id/buttonListView"
+        android:layout_width="95dp"
+        android:layout_height="54dp"
+        android:text="List"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.113"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.632" />
+        app:layout_constraintVertical_bias="0.669" />
+
+    <Button
+        android:id="@+id/buttonRecylerView"
+        android:layout_width="103dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="8dp"
+        android:text="Recyler"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnHelp" />
+
+    <Button
+        android:id="@+id/buttonCardView"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:text="Card"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.665" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
