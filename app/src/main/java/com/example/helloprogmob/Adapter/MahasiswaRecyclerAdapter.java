@@ -15,11 +15,11 @@ import com.example.helloprogmob.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MahasiswaRecycleAdapter extends RecyclerView.Adapter<MahasiswaRecycleAdapter.ViewHolder>{
+public class MahasiswaRecyclerAdapter extends RecyclerView.Adapter<MahasiswaRecyclerAdapter.ViewHolder>{
     private Context context;
     private List<Mahasiswa> mahasiswaList;
 
-    public MahasiswaRecycleAdapter(Context context) {
+    public MahasiswaRecyclerAdapter(Context context) {
         this.context = context;
         mahasiswaList = new ArrayList<>();
     }
@@ -42,12 +42,12 @@ public class MahasiswaRecycleAdapter extends RecyclerView.Adapter<MahasiswaRecyc
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MahasiswaRecycleAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MahasiswaRecyclerAdapter.ViewHolder holder, int position) {
             Mahasiswa m = mahasiswaList.get(position);
 
             holder.tvNama.setText(m.getNama());
             holder.tvNim.setText(m.getNim());
-            holder.tvNoTelp.setText(m.getNotelp());
+          //  holder.tvNoTelp.setText(m.getNotelp());
 
     }
 
@@ -61,7 +61,7 @@ public class MahasiswaRecycleAdapter extends RecyclerView.Adapter<MahasiswaRecyc
             super(itemView);
             tvNama = itemView.findViewById(R.id.tvNama);
             tvNim = itemView.findViewById(R.id.tvNim);
-            tvNoTelp = itemView.findViewById(R.id.tvNoTelp);
+            //tvNoTelp = itemView.findViewById(R.id.tvNoTelp);
         }
     }
 }

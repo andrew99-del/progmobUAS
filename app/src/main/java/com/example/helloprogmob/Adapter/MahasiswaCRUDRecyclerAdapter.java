@@ -5,30 +5,40 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import java.util.ArrayList;
-import java.util.List;
+
 import com.example.helloprogmob.Model.Mahasiswa;
 import com.example.helloprogmob.R;
 
-public class DebuggingRecyclerAdapter extends RecyclerView.Adapter<DebuggingRecyclerAdapter.ViewHolder> {
+import java.util.ArrayList;
+import java.util.List;
+
+public class MahasiswaCRUDRecyclerAdapter extends RecyclerView.Adapter<MahasiswaCRUDRecyclerAdapter.ViewHolder>{
     private Context context;
     private List<Mahasiswa> mahasiswaList;
 
-    public DebuggingRecyclerAdapter(Context context) {
+    public MahasiswaCRUDRecyclerAdapter(Context context) {
         this.context = context;
         mahasiswaList = new ArrayList<>();
     }
 
-    public List<Mahasiswa> getMahasiswaList() {
+
+    public MahasiswaCRUDRecyclerAdapter(List<Mahasiswa> mahasiswaList) {
+        this.mahasiswaList = mahasiswaList;
+
+    }
+    public  List<Mahasiswa> getMahasiswaList()
+    {
         return mahasiswaList;
     }
 
-    public void setMahasiswaList(List<Mahasiswa> mahasiswaList) {
+    public void setMahasiswaList(List<Mahasiswa> mahasiswaList){
         this.mahasiswaList = mahasiswaList;
         notifyDataSetChanged();
     }
+
 
     @NonNull
     @Override
@@ -38,27 +48,29 @@ public class DebuggingRecyclerAdapter extends RecyclerView.Adapter<DebuggingRecy
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Mahasiswa m = mahasiswaList.get(position);
+    public void onBindViewHolder(@NonNull MahasiswaCRUDRecyclerAdapter.ViewHolder holder, int position) {
+            Mahasiswa m = mahasiswaList.get(position);
 
-        holder.tvNama.setText(m.getNama());
-        holder.tvNoTelp.setText(m.getNotelp());
-        holder.tvNim.setText(m.getNim());
+            holder.tvNama.setText(m.getNama());
+            holder.tvNim.setText(m.getNim());
+            holder.tvAlamat.setText(m.getAlamat());
+
+           // holder.tvNoTelp.setText(m.getNotelp());
+
     }
 
     @Override
     public int getItemCount() {
         return mahasiswaList.size();
     }
-
     public class ViewHolder extends RecyclerView.ViewHolder{
-        private TextView tvNama, tvNim, tvNoTelp;
-
+        private TextView tvNama, tvNim, tvNoTelp,tvAlamat;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             tvNama = itemView.findViewById(R.id.tvNama);
             tvNim = itemView.findViewById(R.id.tvNim);
-            tvNoTelp = itemView.findViewById(R.id.tvNoTelp);
+            tvAlamat = itemView.findViewById(R.id.editTextTextAlamatBaru);
+            //tvNoTelp = itemView.findViewById(R.id.tvNoTelp);
         }
     }
 }

@@ -6,8 +6,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
-import com.example.helloprogmob.Adapter.MahasiswaRecycleAdapter;
-import com.example.helloprogmob.Pertemuan2.Model.Mahasiswa;
+import com.example.helloprogmob.Adapter.MahasiswaCRUDRecyclerAdapter;
+import com.example.helloprogmob.Adapter.MahasiswaRecyclerAdapter;
+import com.example.helloprogmob.Model.Mahasiswa;
 import com.example.helloprogmob.R;
 
 import java.util.ArrayList;
@@ -21,7 +22,7 @@ public class RecylerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_recyler);
 
         RecyclerView rv = (RecyclerView)findViewById(R.id.rvLatihan);
-        MahasiswaRecycleAdapter mahasiswaRecycleAdapter;
+        MahasiswaRecyclerAdapter MahasiswaRecyclerAdapter;
 
         //data
         List<Mahasiswa> mahasiswaList =new ArrayList<Mahasiswa>();
@@ -41,10 +42,10 @@ public class RecylerActivity extends AppCompatActivity {
         mahasiswaList.add(m5);
         mahasiswaList.add(m6);
 
-        mahasiswaRecycleAdapter = new MahasiswaRecycleAdapter(RecylerActivity.this);
-        mahasiswaRecycleAdapter.setMahasiswaList(mahasiswaList);
+        MahasiswaRecyclerAdapter = new MahasiswaRecyclerAdapter(RecylerActivity.this);
+        MahasiswaRecyclerAdapter.setMahasiswaList(mahasiswaList);
 
         rv.setLayoutManager(new LinearLayoutManager(RecylerActivity.this));
-        rv.setAdapter(mahasiswaRecycleAdapter);
+        rv.setAdapter(MahasiswaRecyclerAdapter);
     }
 }
