@@ -9,7 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.helloprogmob.Pertemuan2.Model.Mahasiswa;
+import com.example.helloprogmob.Model.Mahasiswa;
 import com.example.helloprogmob.R;
 
 import java.util.ArrayList;
