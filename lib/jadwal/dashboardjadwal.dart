@@ -1,15 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class DashboardJadwal extends StatefulWidget {
-  DashboardJadwal({Key key, this.title}) : super(key: key);
+class dashboardjadwal extends StatefulWidget {
+  dashboardjadwal({Key key, this.title}) : super(key: key);
   final String title;
 
   @override
   _DashboardJadwalState createState() => _DashboardJadwalState();
 }
 
-class _DashboardJadwalState extends State<DashboardJadwal> {
+class _dashboardjadwalState extends State<DashboardJadwal> {
   final _formKey = GlobalKey<FormState>();
 
   @override
@@ -37,8 +37,8 @@ class _DashboardJadwalState extends State<DashboardJadwal> {
             children: <Widget>[
               ListTile(
                 leading: Icon(Icons.event_note_outlined),
-                title: Text("Pemograman Mobile"),
-                subtitle: Text("Kamis Sesi 2 (09.30-11.30)"),
+                title: Text("Dasar-dasar manajemen dan organisasi"),
+                subtitle: Text("Selasa Sesi 3 (13.30.30-15.00)"),
                 trailing: PopupMenuButton(
                   itemBuilder: (_) => <PopupMenuItem<String>>[
                     new PopupMenuItem<String>(
@@ -52,8 +52,8 @@ class _DashboardJadwalState extends State<DashboardJadwal> {
               ),
               ListTile(
                 leading: Icon(Icons.event_note_outlined),
-                title: Text("Aplikasi Berbasis Desktop"),
-                subtitle: Text("jumat Sesi 1 (08.30-10.30)"),
+                title: Text("Pengolahaan data multimedia"),
+                subtitle: Text("kamis Sesi 2 (11.30-13.00)"),
                 trailing: PopupMenuButton(
                   itemBuilder: (_) => <PopupMenuItem<String>>[
                     new PopupMenuItem<String>(

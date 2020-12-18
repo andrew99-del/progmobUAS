@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-class Pertemuan8 extends StatefulWidget {
-  Pertemuan8({Key key, this.title}) : super(key: key);
+class pertemuan8 extends StatefulWidget {
+  pertemuan8({Key key, this.title}) : super(key: key);
 
   final String title;
 
   @override
-  _Pertemuan8State createState() => _Pertemuan8State();
+  _pertemuan8State createState() => _pertemuan8State();
 }
 
-class _Pertemuan8State extends State<Pertemuan8> {
+class _pertemuan8State extends State<Pertemuan8> {
   int _counter = 2;
 
   void _incrementCounter() {

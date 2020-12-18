@@ -1,15 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class DashboardMhs extends StatefulWidget {
-  DashboardMhs({Key key, this.title}) : super(key: key);
+class dashboardmhs extends StatefulWidget {
+  dashboardmhs({Key key, this.title}) : super(key: key);
   final String title;
 
   @override
-  _DashboardMhsState createState() => _DashboardMhsState();
+  _dashboardmhsState createState() => _dashboardmhsState();
 }
 
-class _DashboardMhsState extends State<DashboardMhs> {
+class _dashboardmhsState extends State<dashboardmhs> {
   final _formKey = GlobalKey<FormState>();
 
   @override
@@ -38,7 +38,7 @@ class _DashboardMhsState extends State<DashboardMhs> {
               ListTile(
                 leading: Icon(Icons.person),
                 title: Text("Andrew Azio"),
-                subtitle: Text("72170134 - andrew.azio@si.ukdw.ac.id"),
+                subtitle: Text("72170167 - andrew.azio@si.ukdw.ac.id"),
                 trailing: PopupMenuButton(
                   itemBuilder: (_) => <PopupMenuItem<String>>[
                     new PopupMenuItem<String>(
@@ -52,8 +52,8 @@ class _DashboardMhsState extends State<DashboardMhs> {
               ),
               ListTile(
                 leading: Icon(Icons.person),
-                title: Text("Luffy ganteng"),
-                subtitle: Text("72170012 - Luffy@si.ukdw.ac.id"),
+                title: Text("Yosua erik gunawan"),
+                subtitle: Text("72160159 - yosua.erik.gunawan@si.ukdw.ac.id"),
                 trailing: PopupMenuButton(
                   itemBuilder: (_) => <PopupMenuItem<String>>[
                     new PopupMenuItem<String>(

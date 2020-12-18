@@ -1,16 +1,15 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class DashboardDosen extends StatefulWidget {
-  DashboardDosen({Key key, this.title}) : super(key: key);
+class dashboarddosen extends StatefulWidget {
+  dashboarddosen({Key key, this.title}) : super(key: key);
   final String title;
 
   @override
-  _DashboardDosenState createState() => _DashboardDosenState();
+  _dashboarddosenState createState() => _dashboarddosenState();
 }
 
-class _DashboardDosenState extends State<DashboardDosen> {
+class _dashboarddosenState extends State<dashboarddosen> {
   final _formKey = GlobalKey<FormState>();
 
   @override
@@ -38,9 +37,9 @@ class _DashboardDosenState extends State<DashboardDosen> {
             children: <Widget>[
               ListTile(
                 leading: Icon(Icons.person),
-                title: Text("Argo Wibowo, S.Kom., M.T."),
-                subtitle: Text("0512E392 - argo@staff.ukdw.ac.id"),
-                // CARA 1
+                title: Text("Drs. Jong Jek Siang, M.Sc."),
+                subtitle: Text("0921E23 - jjs@staff.ukdw.ac.id"),
+                // Cara pertama
                 // onLongPress: () {
                 //   showDialog(
                 //       context: context,
@@ -65,7 +64,7 @@ class _DashboardDosenState extends State<DashboardDosen> {
                 //       )
                 //   );
                 // },
-                // CARA 2
+                // Cara kedua
                 trailing: PopupMenuButton(
                   itemBuilder: (_) => <PopupMenuItem<String>>[
                     new PopupMenuItem<String>(
@@ -79,8 +78,8 @@ class _DashboardDosenState extends State<DashboardDosen> {
               ),
               ListTile(
                 leading: Icon(Icons.person),
-                title: Text("Drs. Jong Jek Siang, M.Sc."),
-                subtitle: Text("0921E23 - jjs@staff.ukdw.ac.id"),
+                title: Text("Argo Wibowo, S.Kom., M.T."),
+                subtitle: Text("0512E392 - argo@staff.ukdw.ac.id"),
                 trailing: PopupMenuButton(
                   itemBuilder: (_) => <PopupMenuItem<String>>[
                     new PopupMenuItem<String>(

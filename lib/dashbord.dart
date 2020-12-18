@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:progmob_flutter/dashboard.dart';
 import 'package:progmob_flutter/dosen/dashboarddosen.dart';
-import 'package:progmob_flutter/jadwal/dashboardjadwal.dart';
+import 'package:progmob_flutter/jadwal//dashboardjadwal.dart';
 import 'package:progmob_flutter/login.dart';
 import 'package:progmob_flutter/mahasiswa/dashboardmhs.dart';
-import 'package:progmob_flutter/matakuliah/dashboardmatkul.dart';
+import 'package:progmob_flutter/matkul/dashboardmatkul.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class Dashboard extends StatefulWidget {
-  Dashboard({Key key, this.title}) : super(key: key);
+class dashboard extends StatefulWidget {
+  dashboard({Key key, this.title}) : super(key: key);
   final String title;
 
   @override
-  _DashboardState createState() => _DashboardState();
+  _dashboardState createState() => _dashboardState();
 }
 
-class _DashboardState extends State<Dashboard> {
+class _dashboardState extends State<dashboard> {
   final _formKey = GlobalKey<FormState>();
 
   @override
@@ -29,16 +30,16 @@ class _DashboardState extends State<Dashboard> {
         title: Text(widget.title),
       ),
       drawer: Drawer(
-        // Pakai List karena bentuknya berupa list -> ke bawah
+        // Memakaiakai List agar bentuknya spt list -> ke bawah
         child: ListView(
           children: <Widget>[
             UserAccountsDrawerHeader(
-                accountName: Text("Andrew Azio"),
-                accountEmail: Text("andrew.aziog@si.ukdw.ac.id"),
+              accountName: Text("Andrew Azio"),
+              accountEmail: Text("andrew.azio@si.ukdw.ac.id"),
               currentAccountPicture: CircleAvatar(
                 backgroundColor: Colors.white,
                 child: Text(
-                  "ME",
+                  "Saya",
                   style: TextStyle(fontSize: 40.0),
                 ),
               ),
@@ -51,7 +52,7 @@ class _DashboardState extends State<Dashboard> {
                 Navigator.pop(context);
                 Navigator.push(
                     context,
-                  MaterialPageRoute(builder: (context) => DashboardDosen(title: "Dashboard Dosen"))
+                    MaterialPageRoute(builder: (context) => DashboardDosen(title: "Dashboard Dosen"))
                 );
               },
             ),
@@ -63,7 +64,7 @@ class _DashboardState extends State<Dashboard> {
                 Navigator.pop(context);
                 Navigator.push(
                     context,
-                  MaterialPageRoute(builder: (context) => DashboardMhs(title: "Dashboard Mahasiswa"))
+                    MaterialPageRoute(builder: (context) => DashboardMhs(title: "Dashboard Mahasiswa"))
                 );
               },
             ),
@@ -75,7 +76,7 @@ class _DashboardState extends State<Dashboard> {
                 Navigator.pop(context);
                 Navigator.push(
                     context,
-                  MaterialPageRoute(builder: (context) => DashboardMatkul(title: "Dashboard Matakuliah"))
+                    MaterialPageRoute(builder: (context) => DashboardMatkul(title: "Dashboard Matakuliah"))
                 );
               },
             ),
@@ -87,7 +88,7 @@ class _DashboardState extends State<Dashboard> {
                 Navigator.pop(context);
                 Navigator.push(
                     context,
-                  MaterialPageRoute(builder: (context) => DashboardJadwal(title: "Dashboard Jadwal"))
+                    MaterialPageRoute(builder: (context) => DashboardJadwal(title: "Dashboard Jadwal"))
                 );
               },
             ),

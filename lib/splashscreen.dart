@@ -1,20 +1,19 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-
-import 'package:progmob_flutter/dashbord.dart';
+import 'package:progmob_flutter/dashboard.dart';
 import 'package:progmob_flutter/login.dart';
 import 'package:progmob_flutter/pertemuan2.dart';
-
 import 'package:shared_preferences/shared_preferences.dart';
 
-class SplashScreen extends StatefulWidget {
-  SplashScreen({Key key}) : super(key: key);
+
+class splashscreen extends StatefulWidget {
+  splashscreen({Key key}) : super(key: key);
 
   @override
-  _SplashScreenState createState() => _SplashScreenState();
+  _SplashscreenState createState() => _splashscreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen> {
+class _splashscreenState extends State<splashscreen> {
 
   // void navigateLogin() async {
   //   SharedPreferences pref = await SharedPreferences.getInstance();
@@ -33,7 +32,7 @@ class _SplashScreenState extends State<SplashScreen> {
   //   }
   // }
 
-  startSplashScreen() async {
+  startsplashscreen() async {
     var duration = const Duration(seconds: 2);
     SharedPreferences pref = await SharedPreferences.getInstance();
     int isLogin = pref.getInt("is_login");
@@ -87,25 +86,25 @@ class _SplashScreenState extends State<SplashScreen> {
       home: Scaffold(
         backgroundColor: Colors.cyan,
         body: Container(
-          child: Column(
-            // mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              AnimatedContainer(
-                duration: Duration(seconds: 2),
-                curve: Curves.bounceOut,
-                width: _width,
-                height: _height,
-                child: Image.asset(
-                  "ndre.png",
+            child: Column(
+              // mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                AnimatedContainer(
+                  duration: Duration(seconds: 2),
+                  curve: Curves.bounceOut,
                   width: _width,
                   height: _height,
+                  child: Image.asset(
+                    "images/ndree.png",
+                    width: _width,
+                    height: _height,
+                  ),
                 ),
-              ),
-              Align(
-                alignment: Alignment.center,
-              ),
-            ],
-          )
+                Align(
+                  alignment: Alignment.center,
+                ),
+              ],
+            )
         ),
       ),
     );

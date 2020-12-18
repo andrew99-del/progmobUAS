@@ -5,15 +5,15 @@ import 'package:progmob_flutter/login.dart';
 import 'package:progmob_flutter/main.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class Pertemuan2 extends StatefulWidget {
-  Pertemuan2({Key key, this.title}) : super(key: key);
+class pertemuan2 extends StatefulWidget {
+  pertemuan2({Key key, this.title}) : super(key: key);
   final String title;
 
   @override
-  _Pertemuan2State createState() => _Pertemuan2State();
+  _pertemuan2State createState() => _pertemuan2State();
 }
 
-class _Pertemuan2State extends State<Pertemuan2> {
+class _pertemuan2State extends State<pertemuan2> {
  
   final _formKey = GlobalKey<FormState>();
 
